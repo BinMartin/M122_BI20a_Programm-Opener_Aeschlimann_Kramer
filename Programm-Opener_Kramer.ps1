@@ -29,6 +29,8 @@ function GenerateForm
     #Generated Event Script Blocks
     #----------------------------------------------
     #Provide Custom Code for events specified in PrimalForms.
+
+    #Funktion für das öffnen aller ausgewählten Schulprogramme
     $school_opn_btn_OnClick =
     {
         $programme = $checkedListBox2.CheckedItems
@@ -39,6 +41,7 @@ function GenerateForm
 
     }
 
+    #Funktion für das öffnen aller ausgewählten Arbeitsprogramme
     $work_opn_btn_OnClick =
     {
         $programme = $checkedListBox1.CheckedItems
@@ -48,9 +51,9 @@ function GenerateForm
         }
     }
 
+    #Funktion nach dem Klick um Arbeitsprogramme hinzufügen
     $work_add_btn_OnClick =
     {
-        #TODO: Place custom script here
 
         #Generated Form Function
         function GenerateForm
@@ -85,6 +88,7 @@ function GenerateForm
 
             }
 
+            #Funktion für den Durchsuchen Button
             $search_btn_OnClick =
             {
                 $searchfile = New-Object System.Windows.Forms.OpenFileDialog
@@ -95,10 +99,11 @@ function GenerateForm
 
             }
 
+            #Ausgewähltes Programm der Liste hinzufügen
             $handler_Mit_Click =
             {
-                #$checkedListBox1.Items.AddRange([io.path]::GetFileNameWithoutExtension("$file"))
                 $checkedListBox1.Items.AddRange($file)
+                #hinzufügen Fenster schliessen
                 $form_Add_Work.Close()
 
             }
@@ -205,9 +210,9 @@ function GenerateForm
 
     }
 
+    #Funktion nach dem Klick um Schulprogramme hinzufügen
     $school_add_btn_OnClick =
     {
-        #TODO: Place custom script here
         #Generated Form Function
         function GenerateForm
         {
@@ -237,10 +242,10 @@ function GenerateForm
             #Provide Custom Code for events specified in PrimalForms.
             $handler_label2_Click =
             {
-                #TODO: Place custom script here
 
             }
 
+            #Funktion für den Durchsuchen Button
             $search_btn_OnClick =
             {
                 $searchfile = New-Object System.Windows.Forms.OpenFileDialog
@@ -251,10 +256,12 @@ function GenerateForm
 
             }
 
+            #Funktion um Ausgewähltes Programm der Liste hinzufügen
             $handler_Mit_Click =
             {
                 #$checkedListBox2.Items.AddRange([io.path]::GetFileNameWithoutExtension("$file"))
                 $checkedListBox2.Items.AddRange($file)
+                #Programm hinzufügen Fenster schliessen
                 $form_Add_School.Close()
 
             }
